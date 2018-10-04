@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title>Papa's Pizza</title>
+	<link rel="stylesheet"type="text/css" href="Papa's Pizza.css">
+			<h1>PAPA's PIZZA PLACE</h1>
+</head>
+<body>
+
+	<div class="container">
+		
+<!-- the upper toolbar -->
+
+			<div class="toolbar">
+				<button class="barElements">Home</button>
+				<button class="barElements">Contact</button>
+				<button class="barElements">Services</button>				
+				<button class="barElements">About</button>
+		</div>	
+
+<!-- food name buttons -->
+	
+			<div class="food">
+				<button class="foodItems" id="pizza"  onclick='document.getElementById("pop-up").style.display='flex''> Pizza</button>
+				<button class="foodItems" id="burger" onclick='document.getElementById("pop-up").style.display='flex''> Burger</button>
+				<button class="foodItems" id="drinks" onclick='document.getElementById("pop-up").style.display='flex''> Drinks</button>
+	</div>
+</div>
+
+<!-- the first pop-up with pizza names -->
+
+<div id="pop-up" class="pop-up" >
+	<div class="pop-up-content" id="pop-up-content">
+  		<span id="close" class="close">&times;</span><br>
+  		Thank-You For Choosing Pizzas
+			<div id="innerline">
+  		Italian Pizza
+  				<button id="quantity1" class="quantity" onclick="decrementValue(quantNo1)">-</button>			
+  				<input type="text" class="quantNo"		id="quantNo1" value="3">
+  				<button id="quantity2" class="quantity" onclick="incrementValue(quantNo1)">+</button> 
+			</div> 
+<br><br><br><br>
+	<div id="innerline">
+		Cheeze Pizza
+  			<button id="quantity1" class="quantity" onclick="decrementValue(quantNo2)">-</button>			
+  			<input type="text" 	   class="quantNo"  id="quantNo2" value="3">
+  			<button id="quantity2" class="quantity" onclick="incrementValue(quantNo2)">+</button> 
+	</div> 
+	
+<br><br><br>
+	<div id="innerline">
+	Farm-House Pizza
+		<button id="quantity1" class="quantity" onclick="decrementValue(quantNo3)">-</button>			
+		<input type="text" class="quantNo" id="quantNo3" value="3">
+		<button id="quantity2" class="quantity" onclick="incrementValue(quantNo3)">+</button> 
+	</div>
+<br><br><br><br>
+		<span class="cartButton" onclick='document.getElementById("pop-up1").style.display="block"'>Cart</span>				
+	</div> 
+</div>	
+
+<!-- Pizza Cart Pop-Up -->
+
+<div id="pop-up1" class="pop-up" style="background: rgba(255, 255, 255, 0); animation: cartBox 0.5s">
+	<div class="pop-up-content" id="pop-up-content1">
+		<span id="close" class="close">&times;</span><br>
+		<div id="cart" class="cart"></div>
+		<span id="goBack1" class="goBack" onclick='document.getElementById("pop-up1").style.display ="none"'> <- Go Back </span>
+		<span class="infoButton" onclick='document.getElementById("pop-up2").style.display="block"'> Fill Your Info -> </span>
+	</div>
+</div>	  						
+
+	<!-- THE ADDRESS LINE POP-UP -->
+
+<div id="pop-up2" class="pop-up" style=" background: rgba(255, 255, 255, 0); animation: addressBar 0.5s">
+	<div class="pop-up-content" id="pop-up-content1">
+		<span id="close" class="close">&times;</span><br>
+		<div class= "cart">
+	Full Name <br>
+		<input type="text" class="addressLine">
+<hr>
+	Gender:<br>
+		<input type="radio" name="gender" value="male" checked> Male<br>
+  		<input type="radio" name="gender" value="female"> Female<br>
+<hr>
+	Address Line 1 <br>
+  		<input type="text" class="addressLine">
+						  
+	Address Line 2 <br>
+		<input type="text" class="addressLine">
+							 
+		<span id="goBack2" class="goBack" style='margin-left:0% ; font-size: 12 ' onclick='document.getElementById("pop-up2").style.display ="none"'> <- Go Back</span>
+<br><br>
+		<span id ="placeOrder" onclick='alert("Order Placed, Thanks");'> Place Order </span>
+		</div>
+	</div>	  
+</div>						
+	
+<script src="Papa's Pizza.js"></script>
+</body>
+</html>
